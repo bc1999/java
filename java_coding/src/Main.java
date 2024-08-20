@@ -18,8 +18,14 @@ public class Main {
         Gh_arr_str_1 gh_arr_str_1 = new Gh_arr_str_1();
 
         int[] intArr = new int[]{-4,-2,1,4,8};
-        int ans = gh_arr_str_1.findClosestNumber(intArr);
-        System.out.printf("Gh_arr_str_1, ans: " + ans);
+        int ans_gh_arr_str_1 = gh_arr_str_1.findClosestNumber(intArr);
+        System.out.printf("ans_gh_arr_str_1: " + ans_gh_arr_str_1);
+        /////////////////////////////////
+        Gh_arr_str_2 gh_arr_str_2 = new Gh_arr_str_2();
+        String word1 = "abc", word2 = "pqr";
+        String ans_gh_arr_str_2 = gh_arr_str_2.mergeAlternately(word1, word2);
+        System.out.printf("ans_gh_arr_str_2: " + ans_gh_arr_str_2);
+
         /////////////////////////////////
     }
 }
