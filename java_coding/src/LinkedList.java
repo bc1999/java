@@ -1,6 +1,13 @@
 
 
 public class LinkedList {
+    public LinkedList(int value){
+        Node newNode = new Node(value); // new runs the constructor
+        head = newNode;
+        tail = newNode;
+        length = 1;
+
+    }
     private Node head;
     private Node tail;
     private int length;
@@ -11,15 +18,6 @@ public class LinkedList {
         Node(int value){
             this.value = value;
         }
-
-    }
-
-
-    public LinkedList(int value){
-        Node newNode = new Node(value); // new runs the constructor
-        head = newNode;
-        tail = newNode;
-        length = 1;
 
     }
 
