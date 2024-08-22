@@ -17,13 +17,13 @@ public class Main {
         /////////////////////////////////
         int num1 = 11;
         int num2 = num1;
-        System.out.println("num1 : " + num1);
-        System.out.println("num2 : " + num2);
+        System.out.println("num1 : " + num1); // num1 : 11
+        System.out.println("num2 : " + num2); // num2 : 11
 
         num1 = 22;
 
-        System.out.println("num1 : " + num1);
-        System.out.println("num2 : " + num2);
+        System.out.println("num1 : " + num1); // num1 : 22
+        System.out.println("num2 : " + num2); // num2 : 11 , not a pointer
 
         HashMap<String, Integer> map1 = new HashMap<>();
         HashMap<String, Integer> map2 = new HashMap<>();
@@ -31,20 +31,22 @@ public class Main {
 
         map1.put("value", 11);
         map2 = map1;
-        System.out.println("map1 : "+map1); // 11
-        System.out.println("map2 : "+map2); // 11
+        System.out.println("map1 : "+map1); // map1 : {value=11}
+        System.out.println("map2 : "+map2); // map2 : {value=11}
 
         /////////////////////////////////
         map1.put("value", 22);
-        System.out.println("map1 : "+map1); // 22
-        System.out.println("map2 : "+map2); // 22
+        System.out.println("map1 : "+map1); // map1 : {value=22}
+        System.out.println("map2 : "+map2); // map2 : {value=22}
         /////////////////////////////////
 
         map3.put("value", 57);
         map2 = map3;
-        System.out.println("map1 : "+map1); // 22
-        System.out.println("map2 : "+map2); // 57
-        System.out.println("map3 : "+map3); // 57
+        System.out.println("map1 : "+map1); // map1 : {value=22}
+        System.out.println("map2 : "+map2); // map2 : {value=57}
+        System.out.println("map3 : "+map3); // map3 : {value=57}
+        map1 = map2;
+        System.out.println("map1 : "+map1); // map1 : {value=57}
 
 
         /////////////////////////////////
@@ -62,12 +64,12 @@ public class Main {
         /////////////////////////////////
         System.out.println("getHead(), getTail(), getLength(), printList()");
         LinkedList myLinkedList1 = new LinkedList(4);// value of 4
-        myLinkedList1.getHead();
-        myLinkedList1.getTail();
-        myLinkedList1.getLength();
-        myLinkedList1.printList();
+        myLinkedList1.getHead();// Head: 4
+        myLinkedList1.getTail(); // Tail: 4
+        myLinkedList1.getLength(); // Length: 1
+        myLinkedList1.printList(); // 4
         /////////////////////////////////
-        System.out.println("removeLast()");
+        System.out.println("removeLast()"); // pop()
         LinkedList myLinkedList2 = new LinkedList(1);
         myLinkedList2.append(2);
         myLinkedList2.printList();

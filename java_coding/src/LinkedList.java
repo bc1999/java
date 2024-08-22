@@ -8,6 +8,8 @@ public class LinkedList {
         length = 1;
 
     }
+
+    ///////////////////////////////
     private Node head;
     private Node tail;
     private int length;
@@ -20,6 +22,7 @@ public class LinkedList {
         }
 
     }
+    ///////////////////////////////
 
     public void printList(){
         Node temp = head;
@@ -42,7 +45,7 @@ public class LinkedList {
     }
 
 
-    public void append(int value){
+    public void append(int value){ // push
         Node newNode = new Node(value);
 
         if (length == 0){
@@ -55,7 +58,7 @@ public class LinkedList {
         length++;
     }
 
-    public Node removeLast(){
+    public Node removeLast(){ // pop()
 
         /////
         // When there is no item in the LinkedList
@@ -88,7 +91,7 @@ public class LinkedList {
     }
 
 
-    public void prepend(int value) {
+    public void prepend(int value) { // unshift
         Node newNode = new Node(value);
         if (length == 0){
             head = newNode;
@@ -100,7 +103,7 @@ public class LinkedList {
         length++;
     }
 
-    public Node removeFirst() {
+    public Node removeFirst() { // shift
         if (length == 0) return null;
         Node temp = head;
         head = head.next;
