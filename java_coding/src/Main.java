@@ -1,5 +1,4 @@
 import java.util.HashMap;
-
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -61,5 +60,94 @@ public class Main {
         System.out.println("ans_gh_arr_str_2: " + ans_gh_arr_str_2);
 
         /////////////////////////////////
+        System.out.println("getHead(), getTail(), getLength(), printList()");
+        LinkedList myLinkedList1 = new LinkedList(4);// value of 4
+        myLinkedList1.getHead();
+        myLinkedList1.getTail();
+        myLinkedList1.getLength();
+        myLinkedList1.printList();
+        /////////////////////////////////
+        System.out.println("removeLast()");
+        LinkedList myLinkedList2 = new LinkedList(1);
+        myLinkedList2.append(2);
+        myLinkedList2.printList();
+        // (2) Items - Returns 2 Node
+        System.out.println(myLinkedList2.removeLast().value);
+        // (1) Items - Returns 1 Node
+        System.out.println(myLinkedList2.removeLast().value);
+        // (0) Items - Returns null
+        System.out.println(myLinkedList2.removeLast());// java.lang.NullPointerException
+        /////////////////////////////////
+        System.out.println("prepend(1)");
+        LinkedList myLinkedList3 = new LinkedList(2);
+        myLinkedList3.append(3);
+        myLinkedList3.prepend(1);
+        myLinkedList3.printList();
+        /////////////////////////////////
+        System.out.println("removeFirst()");
+        LinkedList myLinkedList4 = new LinkedList(2);
+        myLinkedList4.append(1);
+        myLinkedList4.printList();
+
+        // (2) Items - Returns 2 Node
+        System.out.println(myLinkedList4.removeFirst().value);
+        // (1) Items - Returns 1 Node
+        System.out.println(myLinkedList4.removeFirst().value);
+        // (0) Items - Returns null
+        System.out.println(myLinkedList4.removeFirst());// java.lang.NullPointerException
+
+        /////////////////////////////////
+        System.out.println("get()");
+        LinkedList myLinkedList5 = new LinkedList(0);
+        myLinkedList5.append(1);
+        myLinkedList5.append(2);
+        myLinkedList5.append(3);
+        System.out.println(myLinkedList5.get(2).value + "\n"); // a line break
+        myLinkedList5.printList();
+
+        /////////////////////////////////
+        System.out.println("set()");
+        LinkedList myLinkedList6 = new LinkedList(11);
+        myLinkedList6.append(3);
+        myLinkedList6.append(23);
+        myLinkedList6.append(7);
+        myLinkedList6.printList();
+        System.out.println(myLinkedList5.set(1, 4) + "\n"); // a line break
+        myLinkedList6.printList();
+
+        /////////////////////////////////
+
+        System.out.println("insert(1,1)");
+        LinkedList myLinkedList7 = new LinkedList(0);
+        myLinkedList7.append(2);
+        myLinkedList7.printList();
+        System.out.println(myLinkedList7.insert(1,1) + "\n"); // a line break
+        myLinkedList7.printList();
+
+        /////////////////////////////////
+        System.out.println("remove(2)");
+        LinkedList myLinkedList8 = new LinkedList(11);
+        myLinkedList8.append(3);
+        myLinkedList8.append(23);
+        myLinkedList8.append(7);
+        myLinkedList8.printList();
+        System.out.println(myLinkedList8.remove(2).value + "\n");
+        myLinkedList8.printList();
+
+        /////////////////////////////////
+        System.out.println("reverse()");
+        LinkedList myLinkedList9 = new LinkedList(1);
+        myLinkedList9.append(2);
+        myLinkedList9.append(3);
+        myLinkedList9.append(4);
+        myLinkedList9.printList();
+        myLinkedList9.reverse();
+        System.out.println("\n");
+        myLinkedList9.printList();
+
+        /////////////////////////////////
+
+
+
     }
 }
