@@ -60,6 +60,32 @@ public class Main {
         String word1 = "abc", word2 = "pqr";
         String ans_gh_arr_str_2 = gh_arr_str_2.mergeAlternately(word1, word2);
         System.out.println("ans_gh_arr_str_2: " + ans_gh_arr_str_2);
+        /////////////////////////////////
+        System.out.println("PK1 - Sliding Window");
+        pk1SlidingWindow sw = new pk1SlidingWindow();
+
+        String[] input1 = { "abcabcbb", "bbbbb", "pwwkew" };
+        for (String input : input1) {
+            System.out.println(
+                    String.format(
+                            "lengthOfLongestSubstringWithoutRepeating(\"%s\") = %d",
+                            input,
+                            sw.lengthOfLongestSubstringWithoutRepeating(input)));
+        }
+
+        System.out.println();
+
+        String[] input2 = { "eceba", "aa" };
+        for (String input : input2) {
+            for (int k = 1; k <= input.length(); k++) {
+                System.out.println(
+                        String.format(
+                                "lengthOfLongestSubstringKDistinct(\"%s\", %d) = %d",
+                                input,
+                                k,
+                                sw.lengthOfLongestSubstringKDistinct(input, k)));
+            }
+        }
 
         /////////////////////////////////
         System.out.println("getHead(), getTail(), getLength(), printList()");

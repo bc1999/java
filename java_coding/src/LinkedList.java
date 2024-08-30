@@ -32,16 +32,41 @@ public class LinkedList {
         }
     }
 
-    public void getHead(){
+    public void printAll() {
+        if (length == 0) {
+            System.out.println("Head: null");
+            System.out.println("Tail: null");
+        } else {
+            System.out.println("Head: " + head.value);
+            System.out.println("Tail: " + tail.value);
+        }
+        System.out.println("Length:" + length);
+        System.out.println("\nLinked List:");
+
+        if (length == 0) {
+            System.out.println("empty");
+        } else {
+            printList();
+        }
+    }
+
+    // public void getHead(){
+    public Node getHead(){
         System.out.println("Head: " + head.value);
+        return head;
     }
 
-    public void getTail(){
+    // public void getTail(){
+    public Node getTail(){
+
         System.out.println("Tail: "+tail.value);
+        return tail;
     }
 
-    public void getLength(){
+    // public void getLength(){
+    public int getLength(){
         System.out.println("Length: "+ length);
+        return length;
     }
 
 
