@@ -216,6 +216,69 @@ public class LinkedList {
     }
 
 
+    public void partitionList(int x){
+        if(head==null)return;
+        Node dummy1 = new Node(0);
+        Node dummy2 = new Node(0);
+
+        Node prev1=dummy1;
+        Node prev2 = dummy2;
+        Node current = head;
+
+        while(current!=null){
+            if(current.value<x){
+                prev1.next=current;
+                prev1=current;
+            } else {
+                prev2.next=current;
+                prev2=current;
+            }
+            current = current.next;
+        }
+
+        prev2.next=null;
+        prev1.next = dummy2.next;
+        head=dummy1.next;
+        tail=prev2;
+
+        System.out.println("dummy1.value : ");
+
+        while(dummy1 !=null){
+            System.out.println("dummy1.value " +dummy1.value);
+            dummy1 = dummy1.next;
+        }
+
+
+        System.out.println("prev1.value : ");
+
+        while(prev1 !=null){
+            System.out.println("prev1.value " +prev1.value);
+            prev1 = prev1.next;
+        }
+
+        System.out.println("dummy2.value : ");
+
+        while(dummy2 !=null){
+            System.out.println("dummy2.value " +dummy2.value);
+            dummy2 = dummy2.next;
+        }
+
+
+        System.out.println("prev2.value : ");
+
+        while(prev2 !=null){
+            System.out.println("prev2.value " +prev2.value);
+            prev2 = prev2.next;
+        }
+
+
+
+
+    }
+
+
+
+
 }
 
 
